@@ -1,0 +1,7 @@
+PROCEDURE ERRORS;
+BEGIN
+   (* Нижче йдуть заборонені символи *)
+   VAL = 10;:::::::::?,&
+   A + B;
+   PATH \ FILE;
+   END.

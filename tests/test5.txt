@@ -1,0 +1,6 @@
+PROCEDURE FATAL;
+BEGIN
+    LABEL 999;
+    (* забув закрити коментар...
+    GOTO 999;
+    END;

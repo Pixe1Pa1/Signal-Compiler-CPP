@@ -1,0 +1,16 @@
+PROCEDURE COMMENT_TRAP;
+BEGIN
+(* Закриття коментаря без відкриття: *)
+*) 
+(* '*' 
+        ')' 3   *)
+	
+	LABEL 500;
+
+	(* 2. Comment not closed:
+	GOTO 500;
+	RETURN;
+
+
+	(*  * )
+END;
