@@ -1,0 +1,37 @@
+build/
+out/
+bin/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.doccache
+*.suo
+*.vstreq
+*.VC.db
+*.VC.opendb
+
+# MSBuild
+Debug/
+Release/
+x64/
+x86/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.log
+*.tlog
+*.lastbuildstate
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeSettings.json
+cmake_install.cmake
+install/
+
+# ОС
+.DS_Store
+Thumbs.db
