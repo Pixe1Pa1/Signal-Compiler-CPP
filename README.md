@@ -2,6 +2,20 @@
 
 This repository contains the implementation of a compiler for a subset of the **SIGNAL** programming language. Developed as part of the course **"Fundamentals of Compiler Design"** (Основи проєктування трансляторів) at Igor Sikorsky Kyiv Polytechnic Institute.
 
+## Acknowledgments / References
+
+This code was written using the following educational materials, for which I am highly grateful to the authors. I utilized two specific manuals from **O.I. Marchenko** and **O.O. Marchenko**:
+
+1. **Basics of Translator Design. Instructions and Tasks for Laboratory and Computational-Graphical Works**
+   * *Authors:* Marchenko O.I., Marchenko O.O.
+   * *Publisher:* Igor Sikorsky Kyiv Polytechnic Institute (2021).
+   * *URI:* [https://ela.kpi.ua/handle/123456789/45711](https://ela.kpi.ua/handle/123456789/45711)
+
+2. **Basics of Translator Design. Lecture Notes**
+   * *Author:* Marchenko O.I.
+   * *Publisher:* Igor Sikorsky Kyiv Polytechnic Institute (2021).
+   * *URI:* [https://ela.kpi.ua/handle/123456789/45711](https://ela.kpi.ua/handle/123456789/45710)
+
 ## Phase 1: Lexical Analyzer (LA)
 
 The current version implements a robust Lexical Analyzer designed to process SIGNAL source code into a stream of tokens. It is based on a deterministic finite automaton (FSM) developed for Variant 12.
@@ -23,7 +37,8 @@ The project uses **CMake** to ensure cross-platform compatibility.
 
 1. **Build the project**:
 ```bash
-mkdir build && cd build
+mkdir build
+cd build
 cmake ..
 cmake --build .
 ```
