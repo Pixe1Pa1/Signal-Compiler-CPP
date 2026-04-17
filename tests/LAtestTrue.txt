@@ -1,0 +1,17 @@
+PROCEDURE TRUETEST(A, B, C);
+BEGIN
+	(* Comment:
+	(****) $) 
+D: ; : (*, $ 
+*)
+	LABEL 1, 100, 999;
+ 
+	(100); (* These are parameters in parentheses *)
+
+	($ ASM START $) 
+
+ 10: 20: 30: ; (* Labels and separators *)
+
+GOTO 100;
+RETURN;
+END;

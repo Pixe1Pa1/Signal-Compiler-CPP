@@ -10,6 +10,8 @@ file(GLOB SOURCES "src/*.cpp")
 
 add_executable(SignalCompiler ${SOURCES})
 
-file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/tests")
-file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/tests/" 
-     DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+add_custom_command(TARGET SignalCompiler POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests"
+        "$<TARGET_FILE_DIR:SignalCompiler>"
+)

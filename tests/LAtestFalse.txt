@@ -1,0 +1,14 @@
+PROCEDURE FALSE;
+BEGIN
+	(* Illegal operators and characters *)
+	A = B + C - D * E / F;
+
+	(* Special characters and punctuation *)
+        VAL ? & # @ ! ~ ^;
+
+(* Invalid paths or system characters *)
+PATH \ FILE [ ] { } < > .
+
+(*dollar sign($ $)*)
+$
+END;

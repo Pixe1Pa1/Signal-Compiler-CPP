@@ -1,0 +1,7 @@
+PROCEDURE ERRORS;
+BEGIN
+   (* Below are the prohibited characters *)
+   VAL = 10;:::::::::?,&
+   A + B;
+   PATH \ FILE;
+   END.

@@ -1,0 +1,9 @@
+PROCEDURE TRICKY;
+BEGIN
+    (100);    (* This is not a comment, it is a parameter *)
+    ($ ASMINSERT $)
+    $         (* Error: single dolla *)
+    ((        (* Just two parentheses *)
+    ( * )     (* This is NOT a comment, because there are spaces *)
+	$;;;;;;;
+END;

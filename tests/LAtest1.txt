@@ -1,0 +1,15 @@
+PROCEDURE COMMENTS;
+BEGIN
+    (* This is a regular comment *)
+    (* This is a multi-line
+	comment *)
+    (*****)  (* Many asterisks *)
+    (*(* Fake nesting *)
+    (* Parenthesis inside ( and another one ) *)
+    (* ; : , $ *);$$ (* Delimiters inside *)
+    
+    LABEL 10;
+    
+    (* Strange ending comment ***)
+    GOTO 10;
+END;
