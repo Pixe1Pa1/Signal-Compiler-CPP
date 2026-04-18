@@ -17,7 +17,6 @@ This code was written using the following educational materials, for which I am 
    * *URI:* [https://ela.kpi.ua/handle/123456789/45711](https://ela.kpi.ua/handle/123456789/45710)
 
 ## Phase 1: Lexical Analyzer (LA)
-
 The current version implements a robust Lexical Analyzer designed to process SIGNAL source code into a stream of tokens. It is based on a deterministic finite automaton (FSM) developed for Variant 12.
 
 ### Features
@@ -26,11 +25,20 @@ The current version implements a robust Lexical Analyzer designed to process SIG
 * **Memory Management**: Efficiently manages identifiers and constants using custom linked-list structures.
 * **Error Detection**: Detects illegal symbols, unclosed comments, and buffer overflows for long lexemes.
 
+## Phase 2: Syntax Analyzer (SA, Parser)
+The second phase introduces a Syntax Analyzer built on top of the Lexical Analyzer. It utilizes a **top-down recursive descent parsing** algorithm to validate the grammatical structure of the token stream.
+
+### **Features:**
+* **Recursive Descent Parsing:** Accurately parses the token stream according to the variant's subset of the SIGNAL grammar.
+* **Abstract Syntax Tree (AST) Generation:** Constructs a hierarchical parse tree representing the logical structure of the source program.
+* **Table Integration:** Updates identifier tables with semantic types required for future code generation (e.g., `variable-identifier`, `procedure-identifier`).
+* **Syntax Error Detection:** Identifies structural errors and unexpected tokens, providing precise error messages with row and column tracking, and cleanly halts execution.
+
 ## Project Structure
 * `src/` — Implementation files (.cpp).
 * `include/` — Header files (.h).
 * `tests/` — Test input files with SIGNAL code samples.
-* `docs/` — Contains `reportLA.pdf` (university lab report) and `lexer_fsm.png` (The logic of the scanner is governed by the following state machine).
+* `docs/` — Contains reporting documents for each phase, and `lexer_fsm.png` (The logic of the scanner is governed by the following state machine).
 
 ## Build Instructions
 The project uses **CMake** to ensure cross-platform compatibility.
