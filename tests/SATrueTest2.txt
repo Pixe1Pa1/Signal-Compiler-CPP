@@ -1,0 +1,8 @@
+PROCEDURE MAIN(A, B);
+LABEL 10, 20;
+BEGIN
+    ($ ASMFILE $)
+    10: ;
+    GOTO 20;
+    RETURN;
+END;

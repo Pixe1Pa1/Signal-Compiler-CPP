@@ -4,7 +4,8 @@ struct InfoTable {
 	int code;
 	char name[256];
 	InfoTable* next;
-	int type; // 0 - none, 1 - unsigned-integer
+	int type; // 0 - none, 1 - unsigned-integer, 2 - variable-identifier,
+			  // 3 - procedure-identifier, 4 - assembly-insert-file-identifier 
 	InfoTable(int c, const char* n, int t = 0);
 };
 
