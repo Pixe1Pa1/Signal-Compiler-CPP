@@ -34,6 +34,16 @@ The second phase introduces a Syntax Analyzer built on top of the Lexical Analyz
 * **Table Integration:** Updates identifier tables with semantic types required for future code generation (e.g., `variable-identifier`, `procedure-identifier`).
 * **Syntax Error Detection:** Identifies structural errors and unexpected tokens, providing precise error messages with row and column tracking, and cleanly halts execution.
 
+## Phase 3: Code Generator (CG)
+The final phase focuses on semantic analysis, target code generation, and the assembly of the complete compiler pipeline for the SIGNAL programming language subset.
+
+### Features
+* **Data Integration:** Seamlessly reads and processes the abstract syntax tree (AST) and identifier tables produced by the Syntax Analyzer.
+* **Semantic Analysis:** Validates the semantic correctness of the code and accurately detects semantic errors.
+* **Code Generation:** Generates the target machine code or constructs the necessary internal tables for code emission.
+* **Pipeline Assembly:** Combines the Lexical Analyzer, Syntax Analyzer, and Code Generator into a single, cohesive compiler application.
+* **Comprehensive Error Reporting:** Produces a full listing of the input program, reporting all lexical, syntactic, and semantic errors with precise tracking.
+
 ## Project Structure
 * `src/` — Implementation files (.cpp).
 * `include/` — Header files (.h).
