@@ -44,6 +44,14 @@ The final phase focuses on semantic analysis, target code generation, and the as
 * **Pipeline Assembly:** Combines the Lexical Analyzer, Syntax Analyzer, and Code Generator into a single, cohesive compiler application.
 * **Comprehensive Error Reporting:** Produces a full listing of the input program, reporting all lexical, syntactic, and semantic errors with precise tracking.
 
+## Future Improvements
+
+While the current version of the compiler is fully functional, there are several architectural optimizations planned for future releases to improve performance and code maintainability:
+
+* **Data Structure Optimization:** Transitioning the internal symbol tables (Identifiers, Constants, Keywords) from custom linked lists to dynamic arrays. This will significantly improve memory access speeds and CPU cache locality.
+* **AST Traversal Optimization:** Refactoring the Code Generator to reduce deep recursion during Abstract Syntax Tree (AST) traversal. Implementing iterative approaches or tail-call optimization to prevent potential stack overflow issues on extremely large source files.
+* **Modern C++ Memory Management:** Migrating from raw pointers (`new`/`delete`) to modern C++ smart pointers (`std::unique_ptr`, `std::shared_ptr`) for safer memory handling and to strictly prevent memory leaks.
+
 ## Project Structure
 * `src/` — Implementation files (.cpp).
 * `include/` — Header files (.h).
