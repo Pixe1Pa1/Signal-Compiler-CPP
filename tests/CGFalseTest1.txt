@@ -1,0 +1,4 @@
+PROCEDURE BADPR (BADPR, X, X);
+BEGIN
+    ;
+END;

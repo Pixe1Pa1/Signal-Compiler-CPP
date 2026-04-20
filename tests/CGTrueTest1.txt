@@ -1,0 +1,9 @@
+PROCEDURE MAINPROC (PARAMA, PARAMB, PARAMC);
+LABEL 1, 2, 99;
+BEGIN
+    1: GOTO 2;
+    ;
+    ($ INSERT $)
+    2: RETURN;
+    99: ;
+END;

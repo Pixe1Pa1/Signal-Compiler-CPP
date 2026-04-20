@@ -1,0 +1,16 @@
+PROCEDURE PROCESSOR (ALPHA, BETA);
+LABEL 10, 20, 30;
+BEGIN
+    ;
+    ;
+    GOTO 20;
+    
+    10: RETURN;
+    
+    20: ($ CMATH $)
+    GOTO 30;
+    
+    ($ CL $)
+    
+    30: RETURN;
+END;

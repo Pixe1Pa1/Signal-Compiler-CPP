@@ -44,7 +44,7 @@ void Lexer::Gets()
 		colum = 0;
 	}
 	else if (symbol == '\t') {
-		colum += tab;
+		colum += (tab - (colum % tab));
 	}
 	else {
 		colum++;

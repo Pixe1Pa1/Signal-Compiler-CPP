@@ -4,6 +4,7 @@
 #include "LexerUI.h"
 #include "Parser.h"
 #include "ParserUI.h"
+#include "CodeGenerator.h"
 
 int main() {
 	Tables tables;
@@ -20,6 +21,7 @@ int main() {
 
 	LexerUI::PrintTokensL(TokensL, tables);
 	LexerUI::PrintAllL(tables);
+
 	std::cout << std::endl << "Result Parse tree:" << std::endl;
 	TreeN* Root = nullptr;
 	Parser parser1(TokensL, &tables);
@@ -34,6 +36,11 @@ int main() {
 
 	ParserUI::PrintTree(Root);
 	ParserUI::PrintAllL(tables);
+	
+	CodeGenerator generator(Root, &tables);
+	generator.Generate("output.asm");
+
+	std::cerr << std::endl << "The simulation ended correctly." << std::endl;
 	system("pause");
 	return 0;
 }

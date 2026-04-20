@@ -1,0 +1,7 @@
+PROCEDURE LABELT (X);
+LABEL 1, 1, 2;
+BEGIN
+    1: GOTO 3;
+    1: RETURN;
+    4: ;
+END;

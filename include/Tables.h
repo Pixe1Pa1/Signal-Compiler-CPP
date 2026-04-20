@@ -25,6 +25,7 @@ public:
 	~Tables();
 
 	int FindOrInsert(int mode, const char* name, int t = 0);
+	const char* GetNameByCode(int code);
 private:
 	void InitAttributes();
 	void InitMultCharact();

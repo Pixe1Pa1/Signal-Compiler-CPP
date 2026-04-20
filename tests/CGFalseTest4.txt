@@ -1,0 +1,4 @@
+PROCEDURE FILETEST (X);
+BEGIN
+    ($ NOFILE $)
+END;

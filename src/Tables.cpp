@@ -137,3 +137,20 @@ int Tables::FindOrInsert(int mode, const char* name, int t)
 	}
 	return newNode->code;
 }
+
+const char* Tables::GetNameByCode(int code) {
+	if (code == -1) return nullptr;
+
+	InfoTable* curr = ConstL;
+	while (curr) {
+		if (curr->code == code) return curr->name;
+		curr = curr->next;
+	}
+
+	curr = IdnL;
+	while (curr) {
+		if (curr->code == code) return curr->name;
+		curr = curr->next;
+	}
+	return nullptr;
+}
